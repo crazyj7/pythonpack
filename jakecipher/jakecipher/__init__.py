@@ -4,7 +4,7 @@ import string, random
 
 
 # VERSION
-version="0.1.1"
+version="0.1.2"
 
 BLANKCODE=99
 # 알파벳만 추출한다.
