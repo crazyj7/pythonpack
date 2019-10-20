@@ -2,7 +2,9 @@ import numpy as np
 import math
 import string, random
 
-version="0.0.1"
+
+# VERSION
+version="0.1.1"
 
 BLANKCODE=99
 # 알파벳만 추출한다.
@@ -107,8 +109,12 @@ def jake_encrypt(keys, plain):
 
     return lastcipher
 
-
-def jake_decrypt(keys, lastcipher):
+'''
+keys : key
+lastcipher : ciphertext
+padremove : True/Flase : space padding remove
+'''
+def jake_decrypt(keys, lastcipher, padremove=True):
     if len(keys)%2==0 or len(keys)<3:
         return ''
     apinkeys=[]
@@ -162,6 +168,9 @@ def jake_decrypt(keys, lastcipher):
             i+=1
         else:
             lastdec+=c
+
+    if padremove:
+        lastdec = lastdec.rstrip()
     return lastdec
 
 
