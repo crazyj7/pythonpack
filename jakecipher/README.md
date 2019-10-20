@@ -27,3 +27,20 @@ The character set used for encryption is a 26-character alphabet and is modulate
 아핀 암호 후에 울타리 암호로 키값에 해당되는 row를 만들어 데이터를 transpose(전치)한다.
 암호화에 사용되는 문자셋은 알파벳 26자로 연산값에 mod 26 연산을 하여 다시 문자로 치환한다.  
 
+## API description
+
+- make_jake_key(passphase) : create key data from input text.
+    return value : key (list) : affine key pair list and last one is ultari key
+- jake_encrypt(keys, plaintext) : keys ([k11,k12, k21, k22, k31,k32, ...,kn1, kn2, uk])
+    plaintext : text for original input.
+- jake_decrypt(keys, encdata)  : decrypt data from input.
+    return data size is  multiple fot the block size.
+
+
+
+
+
+
+
+
+
