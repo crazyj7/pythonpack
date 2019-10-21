@@ -51,3 +51,28 @@ jc.printlist("plain:  ", plaintext, 4, False)
 jc.printlist("cipher: ", lastcipher, 4, False)
 jc.printlist("decrypt:", lastdec, 4, False)
 
+# file encrypt
+keys = jc.make_jake_key("newpassword")
+print("KEYS : ", keys)
+
+# read file
+with open('hamlet.txt', 'rt', encoding='utf8') as f:
+    lines = f.readlines()
+
+# encrypt file
+ciphers = []
+for line in lines:
+    cipher = jc.jake_encrypt(keys, line)
+    ciphers.append(cipher)
+with open('hamlet_enc.txt', 'wt', encoding='utf8') as f:
+    f.writelines(ciphers)
+
+# decrypt file
+decs = []
+for i,cipher in enumerate(ciphers):
+    dec = jc.jake_decrypt(keys, cipher)
+    decs.append(dec)
+    print("[{}]".format(i), dec)
+with open('hamlet_dec.txt', 'wt', encoding='utf8') as f:
+    f.writelines(decs)
+
