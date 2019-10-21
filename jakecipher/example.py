@@ -24,10 +24,10 @@ print("PLAINTEXT : ", plaintext)
 # jake_encrypt() and jake_decrypt()
 
 # manual key
-# keys=[5,3, 3,1, 9,7, 5,5, 4]
+keys=[3, 5, 5, 2, 7, 1, 4]
 
 # key generator :
-keys = jc.make_jake_key("myPassword!")
+# keys = jc.make_jake_key("myPassword!")
 print("KEYS : ", keys)
 
 lastcipher=jc.jake_encrypt(keys, plaintext)
@@ -72,7 +72,7 @@ decs = []
 for i,cipher in enumerate(ciphers):
     dec = jc.jake_decrypt(keys, cipher)
     decs.append(dec)
-    print("[{}]".format(i), dec)
+    # print("[{}]".format(i), dec)
 with open('hamlet_dec.txt', 'wt', encoding='utf8') as f:
     f.writelines(decs)
 

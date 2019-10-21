@@ -60,6 +60,10 @@ The character set used for encryption is a 26-character alphabet and is modulate
     padremove는 기본값이 True로 공백 패딩을 제거한다.  
     padremove를 False로 하면 울타리암호 키를 블록크기로 하여 공백 패딩을 유지하여 리턴한다.       
 
+![image](https://user-images.githubusercontent.com/6326475/67176513-44ee6a00-f405-11e9-9fa8-822b5e89d772.png)
+![image](https://user-images.githubusercontent.com/6326475/67176499-2ab48c00-f405-11e9-9cea-3969c4ae2c32.png)
+
+
 ## Example
 
 ```python
