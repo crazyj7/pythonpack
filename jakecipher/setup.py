@@ -32,7 +32,7 @@ with open("README.md", "r", encoding="utf8") as f:
 # version 수정시 _init_에서도 version 수정해야 함.
 setup(
       name='jakecipher',
-      version='0.1.3',
+      version='0.1.4',
       description='jake cipher algorithm',
       long_description=long_description,
       long_description_content_type='text/markdown',
