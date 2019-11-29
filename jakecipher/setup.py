@@ -33,7 +33,7 @@ with open("README.md", "r", encoding="utf8") as f:
 setup(
       name='jakecipher',
       version='0.1.4',
-      description='jake cipher algorithm',
+      description='Simple symmetric alphabet encryption and decryption',
       long_description=long_description,
       long_description_content_type='text/markdown',
       url='https://github.com/crazyj7/pythonpack/tree/master/jakecipher',
@@ -44,6 +44,7 @@ setup(
 
       packages=setuptools.find_packages(),
       install_requires=['numpy',],
+      keywords='encryption,decryption,cipher,crypto,cryptography,security',
       zip_safe=False,
       classifiers=[
             "Programming Language :: Python :: 3",
